@@ -1,7 +1,7 @@
 import fitz 
 from googletrans import Translator
 import asyncio
-from testtest import rawpdf
+from testtest import empty_pdf
 
 # Async because you have to wait till translaton is complete to insert translated text
 async def translate_pdf_in_place(input_path, input_path2, output_path, target_lang="hi", font_path="fonts/NotoSansDevanagari-Regular.ttf"):
@@ -68,5 +68,6 @@ if __name__ == "__main__":
     font_path = "fonts/NotoSansDevanagari-Regular.ttf"
     
 
-    rawpdf(input_pdf, input_pdf2)
+    empty_pdf(input_pdf, input_pdf2)
     asyncio.run(translate_pdf_in_place(input_pdf, input_pdf2, output_pdf, target_lang=language, font_path=font_path))
+
