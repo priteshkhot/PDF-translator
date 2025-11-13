@@ -64,10 +64,10 @@ if __name__ == "__main__":
     
     input_pdf2 = f'raw/textless_{pdf_name}.pdf'
     output_pdf = f'output/GT_{pdf_name}'
-    output_pdf = "somethingsomething2.pdf"
     font_path = "fonts/NotoSansDevanagari-Regular.ttf"
     
 
     empty_pdf(input_pdf, input_pdf2)
     asyncio.run(translate_pdf_in_place(input_pdf, input_pdf2, output_pdf, target_lang=language, font_path=font_path))
+
 
