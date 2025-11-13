@@ -1,7 +1,7 @@
 import pikepdf
 import re
 
-def emptypdf(input_path, input_path2):
+def empty_pdf(input_path, input_path2):
     with pikepdf.open(input_path) as pdf:
         for page in pdf.pages:
             if '/Contents' in page:
@@ -23,4 +23,5 @@ def emptypdf(input_path, input_path2):
                 # Replace page stream with cleaned version
                 page.Contents = pdf.make_stream(new_stream)
         
+
         pdf.save(input_path2)
